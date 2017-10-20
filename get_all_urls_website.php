@@ -63,7 +63,7 @@ class Get_all_URLs {
         ob_end_flush();
         $currentDepth = $this->_depth - $depth;
         $count = count($this->_seen);
-        echo "N: $count - HTTP_STATUS: $httpcode - TIME: $time - DEPTH:: $currentDepth - URL:: $url <br>";
+        echo "Num: $count - HTTP_STATUS: $httpcode - TIME: $time - DEPTH: $currentDepth - URL: $url <br>";
         ob_start();
         flush();
     }
@@ -101,3 +101,4 @@ class Get_all_URLs {
     public function run() {
         $this->crawl_page($this->_url, $this->_depth);
     }
+}
